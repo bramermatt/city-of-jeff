@@ -12,13 +12,13 @@ html {
 nav {
 
     width: 92vw;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     /* padding: 0 .5em; */
     padding-inline: 4vw;
     position: sticky;
     top: 0;
     z-index: 10;
-    background: linear-gradient(to bottom, rgb(0,0,0), rgb(0,0,0,.8), rgb(0,0,0,.6), rgb(0,0,0,.4), transparent);
+    /* background: linear-gradient(to bottom, rgb(0,0,0), rgb(0,0,0,.8), rgb(0,0,0,.6), rgb(0,0,0,.4), transparent); */
 
     background-color: black;
 
@@ -69,9 +69,56 @@ nav {
     }
 
     #dropLevel1, #dropLevel2, #dropLevel3 {
-        display: none;
+        /* display: none; */
     }
 
+}
+
+nav ul li a:hover,
+nav ul li:hover > a {  /* Add this line to keep parent hovered */
+    background-color: black;
+	color: white;
+}
+
+
+/* Dropdown content */
+#dropLevel1 {
+    display: none;
+    position: absolute;
+    background-color: #2e2e2e;
+    min-width: 20ch;
+    z-index: 1;
+	flex-direction: column;
+	gap: 0;
+	border-radius: 5px;
+	box-shadow: 0px 0px 3px grey;
+    /* height: 100vh; */
+    /* max-width: 50vw; */
+    /* max-width: 50%; */
+    /* left: 20px; */
+    /* right: 20px; */
+    top: 70px;
+
+    ul {
+        max-width: max-content;
+    }
+	
+	li {
+	    display: block;
+	    text-align: left;
+	}
+	
+	li a {
+	    padding: .5em;
+		
+	}
+	
+	
+}
+
+nav li:hover #dropLevel1 {
+    display: block;
+	z-index: 5;
 }
 
 main {
@@ -240,6 +287,8 @@ iframe, video {
 
 @media screen and (prefers-color-scheme: dark) {
     body {
-        background-color: black;
+        background-color: rgb(46, 46, 46);
+
+        background: linear-gradient(black,grey);
     }
 }

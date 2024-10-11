@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </ul>
 
 <ul id="navIcons">
-    <li><i class="fa-solid fa-magnifying-glass"></i></li>
+    <!-- <li><i class="fa-solid fa-magnifying-glass"></i></li> -->
     <li><i class="fa-solid fa-bars"></i></li>
 </ul>
 
